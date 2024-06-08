@@ -43,7 +43,7 @@ var control_capas = L.control
 // Control de escala
 L.control.scale().addTo(map);
 
-// Capa WMS de áreas de conservación
+// Capa WMS de Humedales
 var acons = L.tileLayer
   .wms("https://geos1pne.sirefor.go.cr/wms?", {
     layers: "registro_nacional_humedales",
@@ -53,7 +53,7 @@ var acons = L.tileLayer
   .addTo(map);
 
 // Se agrega al control de capas como una capa de tipo "overlay"
-control_capas.addOverlay(acons, "Áreas de conservación");
+control_capas.addOverlay(acons, "Humedales");
 
 // Capa WMS de zonas inundables
 var zonas = L.tileLayer
